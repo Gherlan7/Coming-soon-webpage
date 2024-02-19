@@ -1,8 +1,13 @@
+//Choosing the date we want to count from
+//If the date has passed, the counter will show 00:00:00:00
 var countDownDate = new Date("Feb 29, 2024 12:00:00").getTime();
 var x = setInterval(function () {
+  //Get the actual date
   var now = new Date().getTime();
+  //Calculate the difference between the date we want and today
   var distance = countDownDate - now;
-
+  
+  //Formulas to calculate the exact number of days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
